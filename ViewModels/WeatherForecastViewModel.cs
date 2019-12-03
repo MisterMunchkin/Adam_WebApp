@@ -1,4 +1,4 @@
-﻿namespace Adam_WebApp.Models
+﻿namespace Adam_WebApp.ViewModels
 {
     public class WeatherForecastViewModel
     {

@@ -1,14 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Adam_WebApp.Models
+namespace Adam_WebApp.ViewModels
 {
     public class ProfileViewModel
     {
         [Required]
-        [StringLength(50, ErrorMessage = "User name must not exceed 50 characters")]
-        public string userName { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public string emailAddress { get; set; }
+        [StringLength(50, ErrorMessage = "User name must not exceed 50 characters")]
+        public string UserName { get; set; }
+
+        [Required]
+        public string EmailAddress { get; set; }
     }
 }

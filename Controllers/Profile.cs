@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Adam_WebApp.Models;
+﻿using Adam_WebApp.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Adam_WebApp.Controllers
 {
@@ -11,6 +7,16 @@ namespace Adam_WebApp.Controllers
     public class Profile : Controller
     {
         [HttpGet("[action]")]
-        public IEnumerable<Adam_WebApp>
+        public ProfileViewModel GetProfile(string userName)
+        {
+            ProfileViewModel profile = new ProfileViewModel()
+            {
+                Id = 1,
+                UserName = userName,
+                EmailAddress = "dalmiet@gmail.com"
+            };
+
+            return profile;
+        }
     }
 }
